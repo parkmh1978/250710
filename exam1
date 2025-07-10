@@ -1,0 +1,21 @@
+import streamlit as st
+
+# 제목 및 설명
+st.title("✈️ MBTI 기반 여행지 추천 앱 ✨")
+st.write("자신의 MBTI를 선택하면, 그에 딱 맞는 **여행지**와 추천 이유를 알려드릴게요! 🌍")
+
+# MBTI 선택
+mbti = st.selectbox(
+    "당신의 MBTI를 선택하세요 👇",
+    ["선택하세요", "INTJ", "ENTP", "INFJ", "ENFP", "ISTJ", "ESTP", "ISFJ", "ESFP", 
+     "INTP", "ENTJ", "INFP", "ENFJ", "ISTP", "ESTJ", "ISFP", "ESFJ"]
+)
+
+# 여행지 추천 함수
+def recommend_travel(mbti_type):
+    recommendations = {
+        "INTJ": [("교토 (Kyoto, 일본) 🌸", "전통과 현대를 동시에 경험할 수 있어요."),
+                 ("취리히 (Zurich, 스위스) 🏔️", "조용하고 체계적인 도시 분위기가 어울려요."),
+                 ("소렌토 (Sorrento, 이탈리아) 🏖️", "분석적인 INTJ에게도 감성적인 휴식 필요!")],
+        "ENTP": [("뉴욕 (New York, 미국) 🗽", "활발하고 새로운 것들을 탐구하기 좋아요."),
+                 ("암스테르담 (Amsterdam, 네덜란드) 🚲", "자전거로 여행
